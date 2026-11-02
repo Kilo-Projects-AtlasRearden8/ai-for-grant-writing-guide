@@ -1,0 +1,86 @@
+/* AI for Grant Writing — static site styles */
+:root {
+  --bg: #fafafa;
+  --fg: #1a1a1a;
+  --muted: #555;
+  --accent: #2563eb;
+  --card: #ffffff;
+  --border: #ddd;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--fg);
+  line-height: 1.6;
+}
+.wrap { max-width: 820px; margin: 0 auto; padding: 0 16px; }
+
+/* Header */
+.site-header {
+  background: var(--card);
+  border-bottom: 1px solid var(--border);
+  padding: 32px 0 24px;
+}
+.site-header h1 { margin: 0 0 8px; font-size: 1.75rem; }
+.subtitle { margin: 0 0 8px; color: var(--muted); font-size: 1rem; }
+.credit { color: var(--muted); font-size: 0.9rem; }
+
+/* Nav */
+.site-nav { background: #fff; border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 10; }
+.site-nav ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 6px; }
+.site-nav li { margin: 0; }
+.site-nav a {
+  display: block; padding: 10px 14px; text-decoration: none;
+  color: var(--fg); font-size: 0.95rem; border-radius: 6px;
+}
+.site-nav a:hover, .site-nav a:focus { background: #eef2ff; color: var(--accent); }
+.site-nav strong { color: var(--accent); }
+
+/* Main */
+main { padding: 32px 0; }
+article h2 { font-size: 1.5rem; margin-top: 0; }
+article h3 { font-size: 1.2rem; margin: 24px 0 8px; color: var(--accent); }
+article h4 { font-size: 1.05rem; margin: 20px 0 6px; }
+article p { margin: 12px 0; }
+article ul, article ol { margin: 10px 0 18px; padding-left: 22px; }
+article li { margin: 5px 0; }
+
+pre {
+  background: #f4f4f4; border: 1px solid var(--border); border-radius: 6px;
+  padding: 12px 16px; overflow-x: auto; font-size: 0.9rem;
+}
+code { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; }
+pre code { font-size: 0.9rem; }
+
+/* Boxes */
+.checkbox, .warning {
+  border-radius: 8px; padding: 14px 18px; margin: 20px 0;
+}
+.checkbox { background: #eef2ff; border: 1px solid #c7d2fe; }
+.warning { background: #fef3c7; border: 1px solid #f59e0b; }
+.warning h3 { margin-top: 0; color: #92400e; }
+
+.todo { list-style: none; padding-left: 0; }
+.todo li { display: flex; align-items: center; gap: 8px; margin: 6px 0; }
+.todo input { accent-color: var(--accent); }
+
+.printable { background: #fff; border: 1px solid var(--border); border-radius: 8px; padding: 24px 30px; }
+.printable h2 { border-bottom: 2px solid var(--accent); padding-bottom: 8px; }
+.printable .small { color: var(--muted); font-size: 0.9rem; }
+
+/* Footer */
+.site-footer {
+  background: var(--card); border-top: 1px solid var(--border);
+  padding: 24px 0; color: var(--muted); font-size: 0.85rem;
+}
+.site-footer p { margin: 0; }
+
+@media (max-width: 600px) {
+  .wrap { padding: 0 12px; }
+  .site-nav ul { gap: 4px; }
+  .site-nav a { padding: 8px 10px; font-size: 0.85rem; }
+}
